@@ -35,7 +35,7 @@ The following examples are **valid**
 #define MOSI 4
 #define SCK  5
 #define CS   6
-char data = 0xa3;
+
 void transmit_data(char data){ //SPI(0,0) MSB
     fast_digitalWrite(SCK, LOW);
     fast_digitalWrite(CS, LOW);
@@ -50,4 +50,8 @@ void transmit_data(char data){ //SPI(0,0) MSB
     }
     fast_digitalWrite(CS, HIGH);
 }
+
+....
+transmit_data(0x35);
+
 ```
