@@ -33,6 +33,7 @@
 void setup(void){}
 
 void loop(void){
+  //generate high frequency square wave on pin SQUARE_WAVE_GENERATION_PIN
     while(1){
         fast_digitalWrite(SQUARE_WAVE_GENERATION_PIN,HIGH); 
         fast_digitalWrite(SQUARE_WAVE_GENERATION_PIN,LOW);
