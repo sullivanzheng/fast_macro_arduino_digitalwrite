@@ -1,20 +1,20 @@
- fast_macro_digitalWrite is a MACRO that translates intuitive 
+ ## fast_digitalWrite() is a 15x-20x faster drop-in replacement of Arduino digitalWrite() ##
+ fast_digitalWrite() is a MACRO that translates intuitive 
  but SLOW Arduino digitalWrite() to very fast AVR port
  manipulations.
  
  About 15~20x speedup is expected.
  
-USAGE: 
+## USAGE ##
 #include "fast_macro_digitalWrite.h"
-....
+
 //Replace digitalWrite(SOME_PIN,HIGH) with:
+
 fast_digitalWrite(SOME_PIN,HIGH); 
 
-This MACRO is very useful in accelerating many driver libraries which uses 
-big-banged/software I2C/SPI protocol that used digitalWrite to generate clock and data
-signals
+Use this macro to accelerate your libraries which uses big-banged/software I2C/SPI protocol that used digitalWrite to generate clock and data signals
 
-REMINDER:
+## REMINDER ##
 
 fast_digitalWrite doesn't support expressions as arguments.
 The following statements are not valid:
