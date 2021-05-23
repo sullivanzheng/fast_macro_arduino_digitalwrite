@@ -40,7 +40,7 @@ void transmit_data(char data){ //SPI(0,0) MSB
     fast_digitalWrite(SCK, LOW);
     fast_digitalWrite(CS, LOW);
     for (char i=0;i<8;i++){
-        if (data & 0b10000000 == 0b10000000) 
+        if (data & 0x80) 
             fast_digitalWrite(MOSI, HIGH);
         else
             fast_digitalWrite(MOSI, LOW);
