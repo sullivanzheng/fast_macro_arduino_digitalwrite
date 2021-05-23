@@ -15,7 +15,7 @@ fast_digitalWrite(SOME_PIN,HIGH);
 You can use this macro to accelerate bit-banged protocol that uses slow digitalWrite() to generate clock and data signals
 
 ### REMINDER ###
-For maximum speed, fast_digitalWrite doesn't support expressions as arguments.
+For maximum speed, fast_digitalWrite doesn't support expressions as arguments (including constants).
 
 The following examples are **not valid**
 ```c++
